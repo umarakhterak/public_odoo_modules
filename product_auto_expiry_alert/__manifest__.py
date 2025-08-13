@@ -11,7 +11,7 @@
         'data/email_template.xml',
         'data/cron_expiry_alert.xml'
     ],
-    "images": ['static/description/banner.gif'],
+    "images": ['static/description/banner.png'],
     "installable": True,
     "application": False,
     'license': 'LGPL-3',

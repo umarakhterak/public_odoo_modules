@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="product_panel" name="product.panel.template">
+        <t t-if="total_products > 0">
+            <div class="row" style="margin: 10px;">
+                <div class="col-sm-12">
+                    <div style="color:black;background-color: red;text-align:center;padding: 10px;vertical-align: middle;">
+                        <b>product(s) are expiring within 7 days! Only
+                            <strong>
+                                <t t-esc="total_products"/>
+                            </strong>
+                            Products
+                        </b>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="product_kanban_panel" model="ir.ui.view">
+        <field name="name">product.kanban.panel</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="banner_route">
+                    /product/product_panel
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_tree_panel" model="ir.ui.view">
+        <field name="name">product.tree.panel</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="banner_route">
+                    /product/product_panel
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_template_filter_expiring_soon" model="ir.ui.view">
+        <field name="name">product.template.search.expiring.soon</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='services']" position="after">
+                <filter
+                        name="expiring_soon"
+                        string="Expiry Products"
+                        domain="[('expiring_soon', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

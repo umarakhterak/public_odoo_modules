@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Auto Expiry Alert</title>
+</head>
+<body>
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <h3>Product Expiry Notification & Banner Display</h3>
+            <p class="oe_slogan" style="font-size: 18px; color: #555;">
+                This custom module is designed to enhance product management by tracking expiry dates and improving visibility of expiring products. It includes the following key features:
+            </p>
+            <p class="oe_slogan" style="font-size: 18px; color: #555;">
+                <p class="oe_slogan" style="font-size: 18px; color: #555;">
+                Banner features are not allowed in Odoo 18.
+            </p>
+            <p class="oe_slogan" style="font-size: 18px; color: #555;">
+                <h6>1. Automatic Email Notification:</h6>
+                   A daily scheduled action is configured to automatically send an email to the product owner.
+                    The email includes details such as the product name and its expiry date, helping the owner stay informed about upcoming expirations.
+
+                <h6>2. Expiry Banner on Product List and Kanban Views:</h6>
+                Displays a banner on both Product List View and Kanban View showing the quantity of products that are about to expire.
+                Provides at-a-glance information to users without needing to open each product.
+
+                <h6>3. Custom Search Filter:</h6>
+                A custom filter added to the product search bar.
+                On clicking this filter, it shows only the expiring products, making it easy to track and manage them.
+            </p>
+            <h1 class="oe_slogan" style="color:#00AEEF; font-size: 30px; font-weight: bold;">
+                Product Expiry Integration
+            </h1>
+            <h3>Step 1</h3>
+            <p class="oe_slogan" style="font-size: 18px; color: #555;">
+                Open the product form view and set the expiry date for the product.
+            </p>
+            <img src="product_form.png" alt="Expiry Data Alert" style="max-width: 100%; height: auto; margin-top: 20px;"/>
+        </div>
+    </section>
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <h3>Step 2</h3>
+            <p class="oe_slogan" style="font-size: 18px; color: #555;">
+                Products that are expiring within 7 days will be displayed in a banner at the top of the List and Kanban views.
+            </p>
+            <img src="list_view.png" alt="Expiry Data Alert" style="max-width: 100%; height: auto; margin-top: 20px;" />
+        </div>
+    </section>
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <h3>Step 3</h3>
+            <p class="oe_slogan" style="font-size: 18px; color: #555;">
+                A custom filter named 'Expiry Products' is available in the product search view. When you click on it, only the products with an expiry date within the next 7 days will be displayed
+            </p>
+            <img src="search_view.png" alt="Expiry Data Alert" style="max-width: 100%; height: auto; margin-top: 20px;" />
+            <img src="search_filter.png" alt="Expiry Data Alert" style="max-width: 100%; height: auto; margin-top: 20px;" />
+        </div>
+    </section>
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <h3>Step 4</h3>
+            <p class="oe_slogan" style="font-size: 18px; color: #555;">
+                A scheduled action has been created that automatically sends an email daily to the product owner. The email contains the product name and its expiry date.
+            </p>
+            <img src="scheduled_action.png" alt="Expiry Data Alert" style="max-width: 100%; height: auto; margin-top: 20px;" />
+            <img src="email_tree_view.png" alt="Expiry Data Alert" style="max-width: 100%; height: auto; margin-top: 20px;" />
+            <img src="email_form_view.png" alt="Expiry Data Alert" style="max-width: 100%; height: auto; margin-top: 20px;" />
+        </div>
+    </section>
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <h2>Developed by:</h2>
+            <p style="font-size: 18px; color: #555;">
+                Muhammad Umar
+                <br/>
+                Odoo Developer
+                <br/>
+                Email: <a href="https://umar200ak@gmail.com" target="_blank">umar200ak@gmail.com</a> /
+                <a href="https://github.com/umarakhterak" target="_blank">Github</a>
+            </p>
+        </div>
+    </section>
+</body>
+</html>

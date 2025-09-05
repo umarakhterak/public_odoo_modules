@@ -10,6 +10,6 @@ class ProductTemplate(models.Model):
     @api.depends_context('lang')  # Minimal dependency
     def _compute_hide_custom_field_flag(self):
         param = self.env['ir.config_parameter'].sudo().get_param(
-            'product_stock_alert.show_min_qty_field', 'False')
+            'stock_quantity_alert.show_min_qty_field', 'False')
         for rec in self:
             rec.hide_custom_field_flag = param == 'True'

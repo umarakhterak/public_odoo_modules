@@ -1,5 +1,5 @@
 {
-    'name': 'Smart Product Inventory',
+    'name': 'Stock Quantity Alert',
     'version': '16.0.1.0',
     'summary': 'Product Management with Low Stock Alerts and Supplier Info',
     'description': 'Manage products with variants, barcode, stock tracking, and auto email alerts.',

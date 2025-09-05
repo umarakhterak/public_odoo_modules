@@ -24,6 +24,6 @@ class StockAlert(models.Model):
                 low_stock_products.append(product) # Add to list for email
 
         if low_stock_products:
-            template = self.env.ref('product_stock_alert.mail_template_low_stock')
+            template = self.env.ref('stock_quantity_alert.mail_template_low_stock')
             ctx = {'low_stock_products': low_stock_products, 'user': self.env.user}
             template.with_context(ctx).send_mail(self.env.user.id, force_send=True) # Note: send_mail will render using the QWeb template with context
